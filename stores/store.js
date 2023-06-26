@@ -1,29 +1,26 @@
+
 import { defineStore } from 'pinia'
 
-export const useAppStore = defineStore('apartvil', {
+export const useAppStore = defineStore('store', {
 
   state: () => {
     return {
-      user:{
-        userRights: "" /*user admin tenant*/
-      }
+      arrayData: {},
     }
   },
   getters: {
-
+    allPoints(state){
+      let points = 0;
+      for (const stage of state.arrayData.stages) {
+        for (const game of stage.games) {
+          points += game.bestResult
+        }
+      }
+      return points
+    },
   },
   actions: {
-    
+   
   },
+  
 })
-
-
-/* <script setup>
-    import { useStore } from '~/stores/store.js'
-    const store = useStore()
-
-</script> */
-
-// if (import.meta.hot) {
-//     import.meta.hot.accept(definePiniaStore(useStore, import.meta.hot))
-// }

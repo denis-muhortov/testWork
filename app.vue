@@ -16,7 +16,7 @@
 .app{
   width: 100vw;
   height: 100vh;
-  background-color: #FFF;
+  background-color: #d3d3d3;
   font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 600;
   overflow-x: hidden;
