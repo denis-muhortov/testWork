@@ -1,0 +1,31 @@
+<template>
+  <div class="app 
+                flex flex-col items-center justify-center">
+    <div class="app-grid 
+                  flex flex-col items-center justify-center">
+      <div class="wrapper 
+                    w-full 
+                    flex flex-col items-center justify-center">
+        <NuxtPage />
+      </div>
+    </div>
+  </div>
+</template>
+
+<style>
+.app{
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFF;
+  font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  overflow-x: hidden;
+}
+.app-grid{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 30px;
+  height: fit-content;
+  background-color: transparent;
+}
+</style>
