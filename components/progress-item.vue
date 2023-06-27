@@ -10,7 +10,7 @@ export default{
     },
     computed:{
         img(){
-            return this.stage.thresholdPoints >= this.pointPlayer ? true : false
+            return this.store.allPoints >= this.stage.thresholdPoints ? false : true
         },
     },
     
@@ -20,8 +20,10 @@ export default{
 <template>
     <div class="progress-item relative w-full h-28 flex flex-col justify-between items-center z-10">
         <div class="section-point flex">
-            <NuxtImg width="46" height="24" src="/img/star.svg" alt="star" v-if="img"/>
-            <NuxtImg width="46" height="24" src="/img/star_enable.svg" alt="star" v-else/>
+            <transition name="fadeImg" mode="out-in">
+                <NuxtImg width="46" height="24" src="/img/star.svg" alt="star" v-if="img"/>
+                <NuxtImg width="46" height="24" src="/img/star_enable.svg" alt="star" v-else/>
+            </transition>  
         </div>
         <div class="line flex bg-black w-px"/>
         <div class="section-point flex text-black">
@@ -31,6 +33,23 @@ export default{
 </template>
 
 <style scoped>
+
+.fadeImg-enter-active,
+.fadeImg-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fadeImg-enter-from,
+.fadeImg-leave-to {
+  opacity: 0;
+}
+
+
+
+
+
+
+
 .progress-item:nth-last-child(-n+2) .line{
     opacity: 0;
 }

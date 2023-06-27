@@ -1,11 +1,11 @@
 <template>
   <div class="app 
-                flex flex-col items-center justify-center">
+                flex flex-col items-center justify-start">
     <div class="app-grid 
-                  flex flex-col items-center justify-center">
+                  flex flex-col items-center justify-start">
       <div class="wrapper 
-                    w-full 
-                    flex flex-col items-center justify-center">
+                    w-full mt-40
+                    flex flex-col items-center justify-start">
         <NuxtPage />
       </div>
     </div>

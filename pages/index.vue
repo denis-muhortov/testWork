@@ -11,8 +11,8 @@ export default{
 
 </script>
 <template>
-    <div class="flex flex-col justify-start">
-        <block-progress-player class="mb-10"/>
+    <div class="flex flex-col justify-start items-start">
+        <block-progress-player/>
     </div>
 </template>
 
